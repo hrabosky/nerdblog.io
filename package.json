@@ -1,0 +1,26 @@
+{
+  "name": "nerdblog.io",
+  "version": "0.0.1",
+  "description": "Getting our feet wet.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hrabosky/nerdblog.io.git"
+  },
+  "keywords": [
+    "Nerd",
+    "Blog",
+    "Best",
+    "Site",
+    "Ever"
+  ],
+  "author": "alexander.io, hrabosky.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hrabosky/nerdblog.io/issues"
+  },
+  "homepage": "https://github.com/hrabosky/nerdblog.io#readme"
+}
