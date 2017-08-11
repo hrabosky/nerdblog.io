@@ -1,1 +1,3 @@
-Alex Harris is the coolest cat, got a rata tat tat
+# nerdblog.io
+___
+**This will be the best site ever**
