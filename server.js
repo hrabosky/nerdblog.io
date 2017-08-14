@@ -1,4 +1,4 @@
-const express = require('express' 4.0.0)
+const express = require('express')
 const app = express()
 
 app.get('/', function (req, res) {
