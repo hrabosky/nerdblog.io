@@ -67,7 +67,7 @@ var insertDocuments = function(db, callback) {
     console.log("Inserted 2 authors into the authors collection");
     callback(result);
   });
-}
+};
 
 /*
 var insertPosts = function(db, callback) {
