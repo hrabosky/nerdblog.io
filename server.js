@@ -35,7 +35,7 @@ var url = 'mongodb://localhost:27017/nerdblog';
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
-  insertDocuments(db, function() {
+  insertauthors(db, function() {
     console.log('Finished inserting documents');
   })
 	insertPosts(db, function() {
