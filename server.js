@@ -38,9 +38,9 @@ MongoClient.connect(url, function(err, db) {
   insertauthors(db, function() {
     console.log('Finished inserting documents');
   })
-	insertPosts(db, function() {
-		console.log('Finished inserting posts');
-	})
+	//insertPosts(db, function() {
+		//console.log('Finished inserting posts');
+	//})
   db.close();
 });
 
