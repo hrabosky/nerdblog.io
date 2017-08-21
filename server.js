@@ -68,7 +68,7 @@ var insertauthors = function(db, callback) {
   });
 }
 
-var insertPosts = function(db, callback() {
+var insertPosts = function(db, callback) {
       // get the posts collection
       var collection = db.collection('posts');
       // Insert some posts
