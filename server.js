@@ -35,12 +35,12 @@ var url = 'mongodb://localhost:27017/nerdblog';
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
-  insertauthors(db, function() {
+  insertDocuments(db, function() {
     console.log('Finished inserting documents');
   })
-	//insertPosts(db, function() {
-		//console.log('Finished inserting posts');
-	//})
+	insertPosts(db, function() {
+	console.log('Finished inserting posts');
+	})
   db.close();
 });
 
@@ -48,11 +48,11 @@ MongoClient.connect(url, function(err, db) {
 
 //Inserting a Document
 
-var insertauthors = function(db, callback) {
+var insertDocuments = function(db, callback) {
   // Get the documents collection
   var collection = db.collection('authors');
   // Insert some documents
-  collection.insertauthors([{
+  collection.insertDocuments([{
     fname: 'john',
     uname: 'hraboskyjr',
     location: 'wisconsin',
