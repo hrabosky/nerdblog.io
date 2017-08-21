@@ -38,9 +38,10 @@ MongoClient.connect(url, function(err, db) {
   insertDocuments(db, function() {
     console.log('Finished inserting documents');
   })
-	insertPosts(db, function() {
+/*	insertPosts(db, function() {
 	console.log('Finished inserting posts');
 	})
+	*/
   db.close();
 });
 
@@ -68,6 +69,7 @@ var insertDocuments = function(db, callback) {
   });
 }
 
+/*
 var insertPosts = function(db, callback) {
       // get the posts collection
       var collection = db.collection('posts');
@@ -85,9 +87,9 @@ var insertPosts = function(db, callback) {
           date_created: DATE_TIME,
           postauthor: 'claybeard'
         }
-
       ], function(err, result) {
         console.log("Inserted 2 posts into the posts collection");
         callback(result);
       });
     }
+*/
