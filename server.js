@@ -30,15 +30,22 @@ MongoClient.connect(url, function(err, db) {
 
 var insertDocuments = function(db, callback)  {
 	// Get the documents collection
-	var collection = db.collection('documents');
+	var collection = db.collection('authors');
 	// Insert some documents
 	collection.insertMany([
-		{a : 1}, {a : 2}, {a : 3}
+		{
+			fname : 'john',
+			uname : 'hraboskyjr',
+			location : 'wisconsin',
+			post_count : 0
+		},{
+			fname : 'alex',
+			uname : 'claybeard',
+			location : 'washington',
+			post_count : 0
+		}
 	], function(err, result) {
-	assert.equal(err, null);
-	assert.equal(3, result.result.n);
-	assert.equal(3, result.ops.length);
-	console.log("Inserted 3 documents into the document collection");
+	console.log("Inserted 2 documents into the document collection");
 	callback(result);
 	});
 }
