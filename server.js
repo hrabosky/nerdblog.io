@@ -35,61 +35,35 @@ var url = 'mongodb://localhost:27017/nerdblog';
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
-  insertDocuments(db, function() {
-    console.log('Finished inserting documents');
-  })
-/*	insertPosts(db, function() {
-	console.log('Finished inserting posts');
-	})
-	*/
+  //	insertDocuments(db, function(){
+  //	console.log('Finished inserting documents');
+  //})
   db.close();
 });
 
 
 
 //Inserting a Document
-
-var insertDocuments = function(db, callback) {
-  // Get the documents collection
-  var collection = db.collection('authors');
-  // Insert some documents
-  collection.insertDocuments([{
-    fname: 'john',
-    uname: 'hraboskyjr',
-    location: 'wisconsin',
-    post_count: 0
-  }, {
-    fname: 'alex',
-    uname: 'claybeard',
-    location: 'washington',
-    post_count: 0
-  }], function(err, result) {
-    console.log("Inserted 2 authors into the authors collection");
-    callback(result);
-  });
-};
-
 /*
-var insertPosts = function(db, callback) {
-      // get the posts collection
-      var collection = db.collection('posts');
-      // Insert some posts
-      collection.insertMany([{
-          subject: 'first post',
-          body: 'this is our first post',
-          tags: [Test, Alpha],
-          date_created: DATE_TIME,
-          postauthor: 'hraboskyjr'
-        }, {
-          subject: 'second post',
-          body: 'this is our second post',
-          tags: [Test, Beta],
-          date_created: DATE_TIME,
-          postauthor: 'claybeard'
-        }
-      ], function(err, result) {
-        console.log("Inserted 2 posts into the posts collection");
-        callback(result);
-      });
-    }
+var insertDocuments = function(db, callback)  {
+	// Get the documents collection
+	var collection = db.collection('authors');
+	// Insert some documents
+	collection.insertMany([
+		{
+			fname : 'john',
+			uname : 'hraboskyjr',
+			location : 'wisconsin',
+			post_count : 0
+		},{
+			fname : 'alex',
+			uname : 'claybeard',
+			location : 'washington',
+			post_count : 0
+		}
+	], function(err, result) {
+	console.log("Inserted 2 documents into the document collection");
+	callback(result);
+	});
+}
 */
