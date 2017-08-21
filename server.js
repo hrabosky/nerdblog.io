@@ -1,8 +1,17 @@
 const express = require('express')
 const app = express()
+const path = require('path')
+
 
 app.get('/', function (req, res) {
-	res.send('Hello World')
+// Query database 
+// send the data to the client that requested it.
+	res.sendFile(path.join(__dirname + "/public/index.html"))
+})
+
+// Handler for requests from client at nerdblog.io/posts
+app.get('/posts', function (req, res) {
+	res.send()
 })
 
 app.listen(3000, function () {
