@@ -21,6 +21,10 @@ app.get('/style.css', function(req, res) {
 app.get('/app.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/app.js'))
 })
+app.get('/blog_post.js', function (req, res){
+  res.sendFile(path.join(__dirname + '/public/js/blog_post'))
+}) 
+
 
 app.listen(3000, function() {
   console.log('Example app listening on port 3000!')
