@@ -28,7 +28,7 @@ app.get('/app.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/app.js'))
 })
 app.get('/blog_post.js', function (req, res){
-  res.sendFile(path.join(__dirname + '/public/js/blog_post'))
+  res.sendFile(path.join(__dirname + '/public/js/blog_post.js'))
 })
 app.get('/materialize.js', function(req, res){
   res.sendFile(path.join(__dirname + '/public/js/materialize.js'))
