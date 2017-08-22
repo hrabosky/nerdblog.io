@@ -25,6 +25,7 @@
   "homepage": "https://github.com/hrabosky/nerdblog.io#readme",
   "dependencies": {
     "express": "^4.15.4",
+    "materialize-css": "^0.100.1",
     "mongodb": "^2.2.31",
     "mongodb-server": "^1.0.0"
   }
