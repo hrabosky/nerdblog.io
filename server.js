@@ -17,14 +17,25 @@ app.get('/posts', function(req, res) {
 app.get('/style.css', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/css/style.css'))
 })
+app.get('/materialize.css', function(req,res) {
+  res.sendFile(path.join(__dirname + '/public/css/materialize.css'))
+})
+app.get('/materialize.min.css', function(req,res) {
+  res.sendFile(path.join(__dirname + '/public/css/materalize.min.css'))
+})
 
 app.get('/app.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/app.js'))
 })
 app.get('/blog_post.js', function (req, res){
-  res.sendFile(path.join(__dirname + '/public/js/blog_post'))
-}) 
-
+  res.sendFile(path.join(__dirname + '/public/js/blog_post.js'))
+})
+app.get('/materialize.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/public/js/materialize.js'))
+})
+app.get('/materialize.min.js', function(req, res){
+  res.sendFile(path.join(__dirname + '/public/js/materalize.min.js'))
+})
 
 app.listen(3000, function() {
   console.log('Example app listening on port 3000!')
