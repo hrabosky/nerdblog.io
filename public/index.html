@@ -1,3 +1,4 @@
+0
 <html>
 
 <head>
@@ -15,16 +16,37 @@
   <script type='text/javascript' src="blog_post.js"></script>
   <script type="text/javascript" src="app.js"></script>
   <h1 id="title">nerdblog.io</h1>
-  <p>Under construction
-    <form>
-      subject: <br> <input id='tb_psubject' type='text' name='subject'><br>
-      body: <br> <input id='tb_pbody' type='text' name='body'><br>
-      tags: <br> <input id='tb_ptags' type='text' name='tags'><br>
-      username: <br> <input id='tb_puname' type='text' name='uname'><br>
-      <input id='btn_psubmit' type="submit" value="post">
+  <h3 id='subtitle'>Under construction</h3>
+  <div class="row">
+    <form class="col s12">
+      <div class="row">
+        <div class="input-field col s6">
+          <input placeholder="Placeholder" id="post_subject" type="text" class="validate">
+          <label for="post_subject">Subject:</label>
+        </div>
+        <div class="input-field col s6">
+          <input id="post_uname" type="text" class="validate">
+          <label for="post_uname">User Name:</label>
+        </div>
+      </div>
+      <div class="row">
+        <form class="col s12">
+          <div class="row">
+            <div class="input-field col s12">
+              <textarea id="textarea1" class="materialize-textarea"></textarea>
+              <label for="textarea1">Textarea</label>
+            </div>
+          </div>
+        </form>
+      </div>
     </form>
-  </p>
+  </div>
+  <div class="center-align">
+    <button id='btn_psubmit' class="btn waves-effect waves-light" type="submit" name="action">Submit
+ 		<i class="material-icons right">send</i>
+    </div>
 
+<!--Initialize materialize.min.js"-->
   <script type="text/javascript" src="js/materialize.min.js"></script>
 
 </body>
