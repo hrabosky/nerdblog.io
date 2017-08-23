@@ -19,7 +19,7 @@ app.get('/style.css', function(req, res) {
 })
 
 app.get('/materialize.min.css', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/css/materalize.min.css'))
+  res.sendFile(path.join(__dirname + '/public/css/materialize.min.css'))
 })
 
 app.get('/app.js', function(req, res) {
@@ -29,7 +29,7 @@ app.get('/blog_post.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/blog_post.js'))
 })
 app.get('/materialize.min.js', function(req, res) {
-  res.sendFile(path.join(__dirname + '/public/js/materalize.min.js'))
+  res.sendFile(path.join(__dirname + '/public/js/materialize.min.js'))
 })
 
 app.listen(3000, function() {
