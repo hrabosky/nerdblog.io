@@ -17,23 +17,18 @@ app.get('/posts', function(req, res) {
 app.get('/style.css', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/css/style.css'))
 })
-app.get('/materialize.css', function(req,res) {
-  res.sendFile(path.join(__dirname + '/public/css/materialize.css'))
-})
-app.get('/materialize.min.css', function(req,res) {
+
+app.get('/materialize.min.css', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/css/materalize.min.css'))
 })
 
 app.get('/app.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/app.js'))
 })
-app.get('/blog_post.js', function (req, res){
+app.get('/blog_post.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/blog_post.js'))
 })
-app.get('/materialize.js', function(req, res){
-  res.sendFile(path.join(__dirname + '/public/js/materialize.js'))
-})
-app.get('/materialize.min.js', function(req, res){
+app.get('/materialize.min.js', function(req, res) {
   res.sendFile(path.join(__dirname + '/public/js/materalize.min.js'))
 })
 
@@ -50,8 +45,8 @@ var url = 'mongodb://localhost:27017/nerdblog';
 MongoClient.connect(url, function(err, db) {
   assert.equal(null, err);
   console.log("Connected correctly to server");
-  	insertDocuments(db, function(){
-  	console.log('Finished inserting documents');
+  insertDocuments(db, function() {
+    console.log('Finished inserting documents');
   })
   db.close();
 });
@@ -60,24 +55,22 @@ MongoClient.connect(url, function(err, db) {
 
 //Inserting a Document
 
-var insertDocuments = function(db, callback)  {
-	// Get the documents collection
-	var collection = db.collection('authors');
-	// Insert some documents
-	collection.insertMany([
-		{
-			fname : 'john',
-			uname : 'hraboskyjr',
-			location : 'wisconsin',
-			post_count : 0
-		},{
-			fname : 'alex',
-			uname : 'claybeard',
-			location : 'washington',
-			post_count : 0
-		}
-	], function(err, result) {
-	console.log("Inserted 2 documents into the document collection");
-	callback(result);
-	});
+var insertDocuments = function(db, callback) {
+  // Get the documents collection
+  var collection = db.collection('authors');
+  // Insert some documents
+  collection.insertMany([{
+    fname: 'john',
+    uname: 'hraboskyjr',
+    location: 'wisconsin',
+    post_count: 0
+  }, {
+    fname: 'alex',
+    uname: 'claybeard',
+    location: 'washington',
+    post_count: 0
+  }], function(err, result) {
+    console.log("Inserted 2 documents into the document collection");
+    callback(result);
+  });
 }
